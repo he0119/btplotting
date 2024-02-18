@@ -313,5 +313,5 @@ class DataClockHandler:
             if name in skipnan:
                 df[name] = df[name].interpolate()
             elif name not in fillnan:
-                df[name] = df[name].fillna(method='ffill')
+                df[name] = df[name].ffill()
         return df
